@@ -1,0 +1,147 @@
+Version:0.9
+StartHTML:0000000105
+EndHTML:0000006557
+StartFragment:0000003279
+EndFragment:0000006541
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Untitled</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.webhtml1-cssclassselector { color: #800080; }
+.webhtml1-csscomment { color: #FF8000; }
+.webhtml1-csserror { color: #FF0000; text-decoration: underline; }
+.webhtml1-cssidselector { color: #800080; }
+.webhtml1-cssnumbervalue { color: #0000FF; }
+.webhtml1-cssproperty { color: #800040; }
+.webhtml1-cssrulesetwhitespace { }
+.webhtml1-cssselector { color: #800080; font-weight: bold; }
+.webhtml1-cssspecial { }
+.webhtml1-cssstringvalue { color: #0000FF; }
+.webhtml1-csssymbol { color: #0000FF; }
+.webhtml1-cssundefinedproperty { color: #FF0000; text-decoration: underline; }
+.webhtml1-cssundefinedselector { color: #FF0000; }
+.webhtml1-cssundefinedvalue { color: #FF0000; text-decoration: underline; }
+.webhtml1-cssvalue { color: #0000FF; }
+.webhtml1-csswhitespace { }
+.webhtml1-escomment { color: #FF8000; }
+.webhtml1-eserror { color: #FF0000; font-weight: bold; text-decoration: underline; }
+.webhtml1-esidentifier { color: #0000FF; }
+.webhtml1-eskey { font-weight: bold; }
+.webhtml1-esnumber { color: #008000; }
+.webhtml1-esstring { color: #FF0000; }
+.webhtml1-essymbol { }
+.webhtml1-eswhitespace { }
+.webhtml1-globalinactive { color: #808080; }
+.webhtml1-mlcomment { color: #FF8000; }
+.webhtml1-mlerror { color: #FF0000; text-decoration: underline; }
+.webhtml1-mlescapedamps { color: #FF8040; }
+.webhtml1-mlkey { color: #2D8C58; }
+.webhtml1-mlquotedvalue { }
+.webhtml1-mlsymbol { }
+.webhtml1-mltag { color: #000080; }
+.webhtml1-mltagname { color: #3E73AE; }
+.webhtml1-mltext { }
+.webhtml1-mlundefinedkey { color: #FF0000; text-decoration: underline; }
+.webhtml1-mlundefinedtagname { color: #FF0000; text-decoration: underline; }
+.webhtml1-mlvalue { color: #FF00FF; }
+.webhtml1-mlwhitespace { }
+.webhtml1-phpcomment { color: #A5A5A5; }
+.webhtml1-phpconstant { color: #8000FF; }
+.webhtml1-phpdoccomment { color: #FF8000; }
+.webhtml1-phpdoccommenttag { color: #0000FF; }
+.webhtml1-phperror { color: #AA0000; text-decoration: underline; }
+.webhtml1-phpfunction { color: #008000; font-weight: bold; }
+.webhtml1-phpidentifier { color: #008000; }
+.webhtml1-phpinlinetext { }
+.webhtml1-phpkeyword { color: #0000BB; }
+.webhtml1-phpmethod { color: #0080FF; }
+.webhtml1-phpnumber { color: #0000BB; }
+.webhtml1-phpstring { color: #DD0000; }
+.webhtml1-phpstringspecial { color: #FF1C1C; font-weight: bold; }
+.webhtml1-phpsymbol { }
+.webhtml1-phpvariable { color: #0066CC; }
+.webhtml1-phpwhitespace { }
+.webhtml1-specialphpmarker { color: #000000; font-weight: bold; }
+.webhtml1-specialphpvariableprefix { color: #0066CC; }
+.webhtml1-specialscripttag { color: #000000; font-weight: bold; }
+.webhtml1-specialstyletag { color: #000000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<!--StartFragment--><pre><code><span class="webhtml1-specialphpmarker">&lt;?php
+
+</span><span class="webhtml1-globalinactive">include 'facebook.php';
+/**
+ * @author Timur Malgazhdarov
+ * @copyright 2013
+ */
+
+require_once(&quot;facebook.php&quot;);
+
+$config = array('appId'=&gt;'645818095470152',
+                'secret'=&gt;'2492bdbca01c45075450c9256d423e60');
+
+$facebook = new Facebook($config);
+$user_id = $facebook-&gt;getUser();
+
+
+</span><span class="webhtml1-specialphpmarker">?&gt;
+
+</span><span class="webhtml1-mltag">&lt;</span><span class="webhtml1-mltagname">html</span><span class="webhtml1-mltag">&gt;
+</span><span class="webhtml1-mlwhitespace">    </span><span class="webhtml1-mltag">&lt;</span><span class="webhtml1-mltagname">head</span><span class="webhtml1-mltag">&gt;&lt;/</span><span class="webhtml1-mltagname">head</span><span class="webhtml1-mltag">&gt;
+</span><span class="webhtml1-mlwhitespace">    </span><span class="webhtml1-mltag">&lt;</span><span class="webhtml1-mltagname">body</span><span class="webhtml1-mltag">&gt;
+</span><span class="webhtml1-mlwhitespace">    </span><span class="webhtml1-specialphpmarker">&lt;?php
+</span><span class="webhtml1-globalinactive">    if($user_id) {
+        
+        try {
+            
+            $inbox = $facebook-&gt;api('/me/inbox','GET');
+    
+            //$user_profile_1 = json_decode($user_profile);
+            for($i = 0 ; $i&lt;100; $i++) 
+            {   
+                for($j = 0; $j&lt;100; $j++)
+                {
+                    if ($inbox['data'][$i]['comments']['data'][$j]['from']['name'] == NULL)
+                         {
+                               break;
+                         }
+                         else {
+                          echo &quot;The message is from &quot; . $inbox['data'][$i]['comments']['data'][$j]['from']['name'] . &quot;!&quot;;
+                          echo &quot;&lt;/br&gt;&quot;;
+                          echo &quot;Sent on: &quot; . $inbox['data'][$i]['comments']['data'][$j]['created_time'] . &quot;.&quot;;
+                          echo &quot;&lt;/br&gt;&quot;;
+                          echo utf8_encode($inbox['data'][$i]['comments']['data'][$j]['message']); 
+                          echo &quot;&lt;/br&gt;&quot;;
+                         }
+                }
+            }
+            
+            
+            }
+        catch(FacebookApiException $e) {
+            $login_url = $facebook-&gt;getLoginUrl();
+            echo 'Please &lt;a href=&quot;' . $login_url . '&quot;&gt;login.&lt;/a&gt;';
+            error_log($e-&gt;getType());
+            error_log($e-&gt;getMessage());
+        }
+        
+    } else{
+        $login_url = $facebook-&gt;getLoginUrl();
+        echo &quot;haha&quot;;
+        echo 'Please &lt;a href=&quot;' . $login_url . '&quot;&gt;login.&lt;/a&gt;';
+    
+    }
+    
+    </span><span class="webhtml1-specialphpmarker">?&gt;
+</span><span class="webhtml1-mlwhitespace">    </span><span class="webhtml1-mltag">&lt;/</span><span class="webhtml1-mltagname">body</span><span class="webhtml1-mltag">&gt;
+&lt;/</span><span class="webhtml1-mltagname">html</span><span class="webhtml1-mltag">&gt;
+</span></code></pre><!--EndFragment--></body>
+</html>

@@ -1,0 +1,72 @@
+<?php
+
+include 'facebook.php';
+include 'facebookMessages.php';
+//include 'facebook_login.php';
+/**
+ * @author Timur Malgazhdarov
+ * @copyright 2013
+ */
+
+require_once("facebook.php");
+
+
+$config = array('appId'=>'645818095470152',
+                'secret'=>'2492bdbca01c45075450c9256d423e60');
+
+
+$facebook = new Facebook($config);
+$user_id = $facebook->getUser();
+
+
+
+
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+    <?php
+	include "facebookMessages.php";
+	facebookMessages($user_id);
+	if($user_id) 
+		{
+			try {
+				facebookMessages();
+				}
+			catch
+				{
+				$params = array(
+	  							'scope' => 'read_mailbox'
+	  							//'redirect_uri' => 'https://www.myapp.com/post_login_page'
+								);
+				
+	            $login_url = $facebook->getLoginUrl($params);
+	            echo 'No Token </br>';
+	            echo 'Please <a href="' . $login_url . '">login.</a>';
+	            error_log($e->getType());
+	            error_log($e->getMessage());
+	        
+				}
+		}
+	else
+		{
+			$params = array(
+	  							'scope' => 'read_mailbox'
+	  							//'redirect_uri' => 'https://www.myapp.com/post_login_page'
+								);
+				
+	        $login_url = $facebook->getLoginUrl($params);
+	        echo 'Please <a href="' . $login_url . '">login.</a>';
+			
+			$facebook->setExtendedAccessToken();
+			$long_lived_access_token = $facebook->getAccessToken();
+			//echo $long_lived_access_token;
+			//$user_id = $facebook->getUser();
+		}
+				
+    ?>
+    </body>
+</html>

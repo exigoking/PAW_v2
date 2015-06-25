@@ -1,0 +1,5 @@
+div.toggler				{ border:1px solid #ccc; background:url(gmail2.jpg) 10px 12px #eee no-repeat; cursor:pointer; padding:10px 32px; }
+div.toggler .subject	{ font-weight:bold; }
+div.read					{ color:#666; }
+div.toggler .from, div.toggler .date { font-style:italic; font-size:11px; }
+div.body					{ padding:10px 20px; }

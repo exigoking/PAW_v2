@@ -1,0 +1,85 @@
+#gmail{
+	position: absolute;
+	top: 100px;
+	left: 220px;
+	width: 220px;
+	height: auto;
+	border-radius: 15px;
+	
+}
+#login{
+	position: absolute;
+	top: 250px;
+	left: 220px;
+	width: 300px;
+	height: auto;
+	display: none;
+	font: 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	
+}
+#facebook{
+	position: absolute;
+	top: 100px;
+	left: 500px;
+	width: 250px;
+	height: auto;
+	border-radius: 15px;
+}
+#facebook_auth{
+	position: absolute;
+	top: 225px;
+	left: 520px;
+	width: 250px;
+	height: auto;
+	display: none;
+	font: 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	
+}
+
+#twitter{
+	position: absolute;
+	top: 100px;
+	left: 800px;
+	width: 250px;
+	height: auto;
+	border-radius: 15px;
+}
+
+#twitter_auth{
+	position: absolute;
+	top: 225px;
+	left: 820px;
+	width: 250px;
+	height: auto;
+	display: none;
+	font: 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.logo {
+	position: absolute;
+	top: 320px;
+	left: 520px;
+	width: 200px;
+	height: auto;
+}
+#enter_text{
+	position: absolute;
+	top: 500px;
+	left: 580px;
+	font: 30px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+a:link {color:#ffffff;}      /* unvisited link */
+a:visited {color:#ffffff;}  /* visited link */
+
+body{
+	background-image: url('pics/CAPS.png');
+}
+

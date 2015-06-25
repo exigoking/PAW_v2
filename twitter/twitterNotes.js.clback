@@ -1,0 +1,32 @@
+$(document).ready(function(){
+	setInterval(function() {
+      	$.ajax({
+            url:"twitterIndex.php",
+            type:"post",
+            data: {'action': 'update'},
+			dataType: "json",
+            success: function(response) {
+				$("div.tweets").append(response[0].text);
+				
+				var p = $("div.tweets").html();
+				$("#extra").append(p);
+                //$("div.tweets").append(response[0].text);
+				
+            },
+            complete: function(jqXHR, textStatus) {
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+            }
+		});
+	}, 4000); //4 second
+            
+            
+       
+});
+	
+function listTweets() {
+	$.get("tweets.json",function(response){
+		$("#notes").append(response[0].text);
+		});
+    //$("#notes").append("<li>"+response.text+"</li>");
+}
