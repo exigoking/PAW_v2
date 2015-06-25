@@ -2,7 +2,7 @@
 $ds          = DIRECTORY_SEPARATOR;  //1
 
 $storeFolder = 'uploads';   //2
-$where_to = 'C:\Users\Bekzat\Documents\NetBeansProjects\MsgCollector';
+$where_to = 'https://bzbucket-virginia.s3.aws.amazon.com';
 
 if (!empty($_FILES)) {
 
