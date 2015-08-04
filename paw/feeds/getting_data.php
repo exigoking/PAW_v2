@@ -10,7 +10,7 @@ include 'facebookMessages.php';
 require_once('config.php');
 $username = 'TimurMalgazhdar';
 $config = array('appId'=>'645818095470152',
-                'secret'=>'2492bdbca01c45075450c9256d423e60');
+                'secret'=>'FACEBOOK_APP_SECRET');
 $facebook = new Facebook($config);
 /*Connecting to the database*/
 mysql_connect(SERVER, DB_USERNAME, DB_PASSWORD);  
